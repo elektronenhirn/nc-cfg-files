@@ -1,0 +1,7 @@
+[color]
+	ui = auto
+[user]
+	email = nico.coretti@googlemail.com
+	name = Nicola Coretti
+[core]
+	editor = vim
