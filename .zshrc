@@ -174,6 +174,7 @@ alias -g apt-install='apt-get install'
 
 #-- hostname aliases --#
 #-- ssh tunnel aliases --#
+alias hska_ssh="ssh coni1011@login.hs-karlsruhe.de -D 127.0.0.1:9999"
 
 #=========================================================
 # Functions
