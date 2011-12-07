@@ -8,6 +8,9 @@
 "=========================================================
 " Settings 
 "=========================================================
+" set up omni-completion
+filetype plugin on
+set ofu=syntaxcomplete#Complete
 
 " Activate syntax-highlighting
  syntax enable
