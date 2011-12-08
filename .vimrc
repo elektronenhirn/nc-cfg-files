@@ -86,6 +86,21 @@ set ofu=syntaxcomplete#Complete
  iab Ae 2.7182818284590452353602874713526624977573
 
 "========================================================= 
+" Python Abbreviations
+"=========================================================
+iab Apyheader 
+\#!/usr/bin/python
+\<CR># -*- coding: utf-8 -*-
+\<CR>"""
+\<CR><module description>
+\<CR>
+\<CR>@author: Nicola Coretti
+\<CR>@contact: nico.coretti@googlemail.com
+\<CR>@version: <x.y.z> 
+\<CR>"""
+\<CR>__all__ = []
+
+"========================================================= 
 " License Abbreviations
 "========================================================= 
 iab Apybsd 
