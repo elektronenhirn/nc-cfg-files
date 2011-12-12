@@ -57,6 +57,11 @@ if [ "$HOST" = "nc-outpost" ]
         PROMPT="%B%{${fg[yellow]}%}%n%B%{${fg[cyan]}%}@%{${fg[blue]}%}%m:%{${fg[cyan]}%}%~%{${fg[yellow]}%} %#%{${fg[white]}%} "
     fi
 
+if [ "$HOST" = "VIGEMDT11" ]
+    then
+        PROMPT="%B%{${fg[green]}%}%n%B%{${fg[cyan]}%}@%{${fg[yellow]}%}%m:%{${fg[cyan]}%}%~%{${fg[yellow]}%} %#%{${fg[white]}%} "
+    fi
+
 if [ "$USERNAME" = "root" ]
     then
         PROMPT="%B%{${fg[red]}%}%n%B%{${fg[yellow]}%}@%{${fg[${hostcolor}]}%}%m:%{${fg[green]}%}%~%{${fg[cyan]}%} %#%{${fg[white]}%} "
