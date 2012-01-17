@@ -87,6 +87,11 @@ setopt auto_name_dirs
 setopt complete_aliases
 setopt list_types
 
+# directory stack options
+setopt autopushd
+setopt pushdminus
+setopt pushdsilent
+setopt pushdtohome
 
 #=========================================================
 # History
@@ -137,6 +142,9 @@ alias ll='ls -all'
 #-- grep --#
 # colorize the output of the grep command
 alias grep='grep --color=auto'
+
+# directory stack / history
+alias dh='dirs -v'
 
 
 #=========================================================
