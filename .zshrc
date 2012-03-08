@@ -142,6 +142,7 @@ alias ll='ls -all'
 #-- grep --#
 # colorize the output of the grep command
 alias grep='grep --color=auto'
+alias psgrep='ps aux | head -n 1 && ps aux | grep'
 
 # directory stack / history
 alias dh='dirs -v'
