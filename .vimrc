@@ -88,8 +88,37 @@ set ofu=syntaxcomplete#Complete
 "========================================================= 
 " Python Abbreviations
 "=========================================================
-iab Apyheader 
+iab Apymodule  
 \#!/usr/bin/python
+\<CR># -*- coding: utf-8 -*-
+\<CR>'''
+\<CR>This module contains all exceptions/errors of the cca api.
+\<CR>
+\<CR>    Exports:
+\<CR>    Constants:            -
+\<CR>    Functions:            -
+\<CR>    Classes:              -
+\<CR>    Exceptions:           -
+\<CR>    Decorators:           -
+\<CR>        
+\<CR>@author: Nicola Coretti
+\<CR>@contact: 
+\<CR>@version: 
+\<CR>'''
+\<CR>__all__ = []
+\<CR>
+\<CR># Python imports
+\<CR>
+\<CR># Logger setup
+\<CR>
+\<CR># -- Module Constants ---------------------------------------------------------
+\<CR># -- Module Functions ---------------------------------------------------------
+\<CR># -- Module Classes -----------------------------------------------------------
+\<CR># -- Module Decorators ---------------------------------------------------------
+\<CR># -- Module Exceptions --------------------------------------------------------
+
+iab Apyheader 
+\<CR>#!/usr/bin/python
 \<CR># -*- coding: utf-8 -*-
 \<CR>"""
 \<CR><module description>
