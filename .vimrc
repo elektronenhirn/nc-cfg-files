@@ -56,6 +56,10 @@ set ofu=syntaxcomplete#Complete
 " Make the mouse usable in Vim (in all modes)
  set mouse=a
 
+"look in the current directory for "tags", and work up the tree
+"towards root until one is found. 
+set tags=./tags;/
+
 "=========================================================
 " Abbreviations
 "=========================================================
