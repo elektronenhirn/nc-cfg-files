@@ -9,7 +9,7 @@
 " Settings 
 "=========================================================
 " change color scheme
-colors ir_black
+"colors ir_black
 
 " set up omni-completion
 filetype plugin on
@@ -99,7 +99,7 @@ iab Apymodule
 \#!/usr/bin/python
 \<CR># -*- coding: utf-8 -*-
 \<CR>'''
-\<CR>This module contains all exceptions/errors of the cca api.
+\<CR>This module contains -------
 \<CR>
 \<CR>    Exports:
 \<CR>    Constants:            -
