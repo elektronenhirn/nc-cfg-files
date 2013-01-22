@@ -44,28 +44,32 @@ zstyle ':completion:*:kill:*'        force-list always
 autoload -U colors && colors
 autoload -U promptinit && promptinit
 
-if [ "$HOST" = "nc-gate" ]
-    then
-        PROMPT="%B%{${fg[yellow]}%}%n%B%{${fg[blue]}%}@%{${fg[green]}%}%m:%{${fg[blue]}%}%~%{${fg[cyan]}%} %#%{${fg[white]}%} "
-    fi
-if [ "$HOST" = "nc-base" ]
-    then
-        PROMPT="%B%{${fg[yellow]}%}%n%B%{${fg[magenta]}%}@%{${fg[blue]}%}%m:%{${fg[magenta]}%}%~%{${fg[cyan]}%} %#%{${fg[white]}%} "
-    fi
-if [ "$HOST" = "nc-outpost" ]
-    then
-        PROMPT="%B%{${fg[yellow]}%}%n%B%{${fg[cyan]}%}@%{${fg[blue]}%}%m:%{${fg[cyan]}%}%~%{${fg[yellow]}%} %#%{${fg[white]}%} "
-    fi
+autoload -Uz promptinit
+promptinit
+prompt adam2
 
-if [ "$HOST" = "VIGEMDT11" ]
-    then
-        PROMPT="%B%{${fg[green]}%}%n%B%{${fg[cyan]}%}@%{${fg[yellow]}%}%m:%{${fg[cyan]}%}%~%{${fg[yellow]}%} %#%{${fg[white]}%} "
-    fi
-
-if [ "$USERNAME" = "root" ]
-    then
-        PROMPT="%B%{${fg[red]}%}%n%B%{${fg[yellow]}%}@%{${fg[${hostcolor}]}%}%m:%{${fg[green]}%}%~%{${fg[cyan]}%} %#%{${fg[white]}%} "
-    fi
+#if [ "$HOST" = "nc-gate" ]
+#    then
+#        PROMPT="%B%{${fg[yellow]}%}%n%B%{${fg[blue]}%}@%{${fg[green]}%}%m:%{${fg[blue]}%}%~%{${fg[cyan]}%} %#%{${fg[white]}%} "
+#    fi
+#if [ "$HOST" = "nc-base" ]
+#    then
+#        PROMPT="%B%{${fg[yellow]}%}%n%B%{${fg[magenta]}%}@%{${fg[blue]}%}%m:%{${fg[magenta]}%}%~%{${fg[cyan]}%} %#%{${fg[white]}%} "
+#    fi
+#if [ "$HOST" = "nc-outpost" ]
+#    then
+#        PROMPT="%B%{${fg[yellow]}%}%n%B%{${fg[cyan]}%}@%{${fg[blue]}%}%m:%{${fg[cyan]}%}%~%{${fg[yellow]}%} %#%{${fg[white]}%} "
+#    fi
+#
+#if [ "$HOST" = "VIGEMDT11" ]
+#    then
+#        PROMPT="%B%{${fg[green]}%}%n%B%{${fg[cyan]}%}@%{${fg[yellow]}%}%m:%{${fg[cyan]}%}%~%{${fg[yellow]}%} %#%{${fg[white]}%} "
+#    fi
+#
+#if [ "$USERNAME" = "root" ]
+#    then
+#        PROMPT="%B%{${fg[red]}%}%n%B%{${fg[yellow]}%}@%{${fg[${hostcolor}]}%}%m:%{${fg[green]}%}%~%{${fg[cyan]}%} %#%{${fg[white]}%} "
+#    fi
 
 
 #=========================================================
@@ -136,7 +140,7 @@ setopt check_jobs
 # Aliases
 #=========================================================
 #-- ls --#
-alias ls='ls --color=auto -F'
+alias ls='ls -G -F'
 alias ll='ls -all'
 
 #-- grep --#

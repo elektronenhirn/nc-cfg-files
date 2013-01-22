@@ -5,3 +5,5 @@
 	name = Nicola Coretti
 [core]
 	editor = vim
+[http]
+	sslVerify = false
