@@ -208,3 +208,6 @@ map <F7> :set noexpandtab<CR>
 
 " use whitespace insted of tabs
 map <F8> :set expandtab<CR>
+
+" toggle tagbar
+nmap <F9> :TagbarToggle<CR>
