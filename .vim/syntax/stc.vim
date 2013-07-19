@@ -1,0 +1,1 @@
+/Users/NiCoretti/Projects/test/stc.vim
