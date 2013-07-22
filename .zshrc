@@ -222,3 +222,13 @@ proxyhska(){
 
     echo "Proxy enviroment variables are set ..."
 }
+
+# antlr setup
+export CLASSPATH=".:/usr/local/lib/antlr-4.0-complete.jar:$CLASSPATH"
+alias antlr4='java -jar /usr/local/lib/antlr-4.0-complete.jar'
+alias grun='java org.antlr.v4.runtime.misc.TestRig'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Use vim keybindings for shell
+bindkey -v

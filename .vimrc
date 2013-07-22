@@ -63,6 +63,15 @@ set ofu=syntaxcomplete#Complete
 "towards root until one is found. 
 set tags=./tags;/
 
+" smart ident safter linebreak
+set smartindent
+
+" activate backup
+set backup
+set backupdir=~/.vimbak,.
+
+set wildmenu
+
 "=========================================================
 " Abbreviations
 "=========================================================
@@ -188,26 +197,31 @@ iab Acbsd2
 "=========================================================
 " Mappings
 "=========================================================
+" Refine leader 
+let mapleader = ","
+
+" Nerd tree mappings
+nmap <Leader>n :NERDTree<CR>
 
 "Spell checking settings
 "set F2 to enable English spell checking (American English)
-map <F2> :set spell spelllang=en_us<CR>
+map <Leader>e :set spell spelllang=en_us<CR>
 "set F3 to enable German spell checking 
-map <F3> :set spell spelllang=de_de<CR>
+map <Leader>d :set spell spelllang=de_de<CR>
 "set F4 to disable spell checking
-map <F4> :set nospell<CR>
+map <Leader>s :set nospell<CR>
 
 "highlighted search settings
 "set F5 to enable highlighted search
-map <F5> :set hlsearch<CR>
+map <Leader>H :set hlsearch<CR>
 "set F6 to disable highlighted search
-map <F6> :set nohlsearch<CR>
+map <Leader>h :set nohlsearch<CR>
 
 " do not use whitespaces insted of tabs
-map <F7> :set noexpandtab<CR>
+map <Leader>w :set noexpandtab<CR>
 
 " use whitespace insted of tabs
-map <F8> :set expandtab<CR>
+map <Leader>W :set expandtab<CR>
 
 " toggle tagbar
-nmap <F9> :TagbarToggle<CR>
+nmap <Leader>t :TagbarToggle<CR>
