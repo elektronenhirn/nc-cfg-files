@@ -10,3 +10,6 @@
 [submodule ".vim/bundle/code_complete"]
 	path = .vim/bundle/code_complete
 	url = https://github.com/mbbill/code_complete.git
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
