@@ -4,13 +4,19 @@
 " Contact: nico.coretti@googlemail.com
 " Version: 0.1
 "
-"
+
+"========================================================= 
+" Plugins
+"========================================================= 
+" infect vim ;)
+runtime bundle/pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 "=========================================================
 " Settings 
 "=========================================================
 " change color scheme
 "colors ir_black
-
 " set up omni-completion
 filetype plugin on
 set ofu=syntaxcomplete#Complete
@@ -61,10 +67,11 @@ set ofu=syntaxcomplete#Complete
 
 "look in the current directory for "tags", and work up the tree
 "towards root until one is found. 
-set tags=./tags;/
+set tags=tags;/
 
 " smart ident safter linebreak
-set smartindent
+"set smartindent
+set cindent
 
 " activate backup
 set backup
@@ -209,7 +216,7 @@ map <Leader>e :set spell spelllang=en_us<CR>
 "set F3 to enable German spell checking 
 map <Leader>d :set spell spelllang=de_de<CR>
 "set F4 to disable spell checking
-map <Leader>s :set nospell<CR>
+map <Leader>S :set nospell<CR>
 
 "highlighted search settings
 "set F5 to enable highlighted search
@@ -224,4 +231,32 @@ map <Leader>w :set noexpandtab<CR>
 map <Leader>W :set expandtab<CR>
 
 " toggle tagbar
-nmap <Leader>t :TagbarToggle<CR>
+nmap <Leader>o :TagbarToggle<CR>
+
+
+"========================================================= 
+" Cscope integration (thx to Oliver Mueller)
+"========================================================= 
+"   'c'   calls:  find all calls to the function name under cursor
+"   'g'   global: find global definition(s) of the token under cursor
+"   's'   symbol: find all references to the token under cursor
+"   'f'   file:   open the filename under cursor
+"   'i'   includes: find files that include the filename under cursor
+set cscopequickfix=s-,c-,d-,i-,t-,e-
+
+function! CscopeAdd()
+  if filereadable("$HOME/cscope.out")
+    cs add "$HOME/cscope.out"
+    set cscopetag
+  endif
+endfunction
+command! LoadCscope :call CscopeAdd()
+
+nnoremap <Leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nnoremap <Leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nnoremap <Leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nnoremap <Leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nnoremap <Leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nnoremap <Leader>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nnoremap <S-F3> :cs find g <C-R>=expand("<cword>")<CR><CR>
+nnoremap <Leader>l :LoadCscope<CR>
