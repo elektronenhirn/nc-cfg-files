@@ -8,9 +8,11 @@
 "========================================================= 
 " Plugins
 "========================================================= 
-" infect vim ;)
+runtime plugin/gtags.vim
 runtime bundle/pathogen/autoload/pathogen.vim
+" infect vim ;)
 execute pathogen#infect()
+
 
 "=========================================================
 " Settings 
@@ -235,28 +237,17 @@ nmap <Leader>o :TagbarToggle<CR>
 
 
 "========================================================= 
-" Cscope integration (thx to Oliver Mueller)
+" Global (Gtags) integration 
 "========================================================= 
-"   'c'   calls:  find all calls to the function name under cursor
-"   'g'   global: find global definition(s) of the token under cursor
-"   's'   symbol: find all references to the token under cursor
-"   'f'   file:   open the filename under cursor
-"   'i'   includes: find files that include the filename under cursor
-set cscopequickfix=s-,c-,d-,i-,t-,e-
+" go to the referenced point of <cword>
+nnoremap <Leader>r :Gtags -r <C-R>=expand("<cword>")<CR><CR>
+" locate symbol <cword> which are not defined in GTAGS 
+nnoremap <Leader>s :Gtags -s <C-R>=expand("<cword>")<CR><CR>
+" locate string(s) <cword>
+nnoremap <Leader>g :Gtags -g <C-R>=expand("<cword>")<CR><CR>
+" get a list of objects of the current file
+nnoremap <Leader>f :Gtags <C-R>=expand("<cfile>")<CR><CR>
+" go to definition of <cword>
+nnoremap <Leader>i :GtagsCursor<CR>
 
-function! CscopeAdd()
-  if filereadable("$HOME/cscope.out")
-    cs add "$HOME/cscope.out"
-    set cscopetag
-  endif
-endfunction
-command! LoadCscope :call CscopeAdd()
 
-nnoremap <Leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nnoremap <Leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nnoremap <Leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nnoremap <Leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nnoremap <Leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nnoremap <Leader>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nnoremap <S-F3> :cs find g <C-R>=expand("<cword>")<CR><CR>
-nnoremap <Leader>l :LoadCscope<CR>
