@@ -1,8 +1,9 @@
-" Vim syntax file for bake Project.meta files
+" Vim syntax file for Bake Project.meta files
 " Language: Bake 
 " Maintainer: Nicola Coretti
 " Latest Revision: 23 November 2013
-" Contact: nico.coretti@googlemail.com
+" Contact: nicola.coretti@partner.esrlabs.com, nico.coretti@googlemail.com
+"
 
 " checks whether a syntax is already defined for this file
 if exists("b:current_syntax")
@@ -42,11 +43,6 @@ syn match BakeStringType '".*"'
 
 "Ensure each scope is a region, needed to provide propper folding
 syn region BakeFirstLevelKeywordBlock start="{" end="}" fold transparent 
-
-" Todo's:
-" 1. make colors work the right way         [DONE]
-" 2. add support to hightlight strings ""
-
 
 let b:current_syntax = "bake"
 hi def link BakeTodo                     Todo
