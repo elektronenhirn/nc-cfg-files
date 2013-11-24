@@ -48,8 +48,8 @@ let b:current_syntax = "bake"
 hi def link BakeTodo                     Todo
 hi def link BakeComment                  Comment
 hi def link BakeFirstLevelKeyword        Keyword
-hi def link BakeSecondLevelKeyword       Identifier
-hi def link BakeStringType               PreProc
+hi def link BakeSecondLevelKeyword       Keyword
+hi def link BakeStringType               Identifier
 hi def link BakeOptionKeywords           Type
 hi def link BakeValueKeywords            Constant
 hi def link BakeSupportedToolChains      Special
