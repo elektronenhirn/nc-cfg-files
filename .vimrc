@@ -73,7 +73,6 @@ set tags=tags;/
 
 " smart ident safter linebreak
 "set smartindent
-set cindent
 
 " activate backup
 set backup
@@ -249,5 +248,6 @@ nnoremap <Leader>g :Gtags -g <C-R>=expand("<cword>")<CR><CR>
 nnoremap <Leader>f :Gtags <C-R>=expand("<cfile>")<CR><CR>
 " go to definition of <cword>
 nnoremap <Leader>i :GtagsCursor<CR>
-
+" create symbol file / should be called with pwd at project level
+nnoremap <Leader>c :!gtags  -w <CR>
 
