@@ -251,3 +251,9 @@ nnoremap <Leader>i :GtagsCursor<CR>
 " create symbol file / should be called with pwd at project level
 nnoremap <Leader>c :!gtags  -w <CR>
 
+
+"========================================================= 
+" Astyle integration
+"========================================================= 
+nnoremap <Leader>f :!astyle % <CR>
+
