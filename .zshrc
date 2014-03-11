@@ -122,8 +122,8 @@ setopt check_jobs
 # Aliases
 #=========================================================
 #-- ls --#
-alias ls='ls -G -F'
-alias ll='ls -all'
+alias ls='ls -G -F --color=auto'
+alias ll='ls -all --color=auto'
 
 #-- grep --#
 # colorize the output of the grep command
