@@ -79,7 +79,7 @@ set tags=tags;/
 
 " activate backup
 set backup
-set backupdir=~/tmp
+set backupdir=~/.tmp
 
 set wildmenu
 
@@ -205,9 +205,15 @@ nnoremap <Leader>i :GtagsCursor<CR>
 " create symbol file / should be called with pwd at project level
 nnoremap <Leader>c :!gtags  -w <CR>
 
-
 "========================================================= 
 " Astyle integration
 "========================================================= 
 nnoremap <Leader>f :!astyle % <CR>
 
+"========================================================= 
+" Other Shortcuts
+"========================================================= 
+" Enable Hex-Editor-Mode
+nnoremap <Leader>X :%!xxd <CR>
+" Enable Hex-Editor-Mode
+nnoremap <Leader>x :%!xxd -r <CR>
