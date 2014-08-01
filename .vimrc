@@ -50,6 +50,9 @@ set autochdir
 " Show the column an row number of the ruler
  set ruler
 
+" Highlights the current cursor line
+set cursorline
+
 " Show mode of the cursor (color)
  set showmode
 
