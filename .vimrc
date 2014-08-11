@@ -165,9 +165,11 @@ iab Apyheader
 " Refine leader 
 let mapleader = ","
 
+" Open .vimrc
+nnoremap <Leader>v :vsplit $MYVIMRC<CR> 
+
 " Nerd tree mappings
 nnoremap <Leader>n :NERDTree<CR>
-
 "Spell checking settings
 "set F2 to enable English spell checking (American English)
 nnoremap <Leader>e :set spell spelllang=en_us<CR>
