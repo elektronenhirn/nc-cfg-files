@@ -166,30 +166,21 @@ iab Apyheader
 let mapleader = ","
 
 " Nerd tree mappings
-nmap <Leader>n :NERDTree<CR>
+nnoremap <Leader>n :NERDTree<CR>
 
 "Spell checking settings
 "set F2 to enable English spell checking (American English)
-nmap <Leader>e :set spell spelllang=en_us<CR>
+nnoremap <Leader>e :set spell spelllang=en_us<CR>
 "set F3 to enable German spell checking 
-nmap <Leader>d :set spell spelllang=de_de<CR>
-"set F4 to disable spell checking
-nmap <Leader>S :set nospell<CR>
-
-"highlighted search settings
-"set F5 to enable highlighted search
-nmap <Leader>H :set hlsearch<CR>
-"set F6 to disable highlighted search
-nmap <Leader>h :set nohlsearch<CR>
-
-" do not use whitespaces insted of tabs
-nmap <Leader>w :set noexpandtab<CR>
-
-" use whitespace insted of tabs
-nmap <Leader>W :set expandtab<CR>
-
+nnoremap <Leader>d :set spell spelllang=de_de<CR>
+"set F4 to toggle spell checking
+nnoremap <Leader>s :set spell!<CR>
+"toggle highlighted search 
+nnoremap <Leader>h :set hlsearch!<CR>
+" toggle use whitespaces insted of tabs
+nnoremap <Leader>w :set expandtab!<CR>
 " toggle tagbar
-nmap <Leader>o :TagbarToggle<CR>
+nnoremap <Leader>o :TagbarToggle<CR>
 
 
 "========================================================= 
