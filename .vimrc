@@ -170,23 +170,23 @@ nmap <Leader>n :NERDTree<CR>
 
 "Spell checking settings
 "set F2 to enable English spell checking (American English)
-map <Leader>e :set spell spelllang=en_us<CR>
+nmap <Leader>e :set spell spelllang=en_us<CR>
 "set F3 to enable German spell checking 
-map <Leader>d :set spell spelllang=de_de<CR>
+nmap <Leader>d :set spell spelllang=de_de<CR>
 "set F4 to disable spell checking
-map <Leader>S :set nospell<CR>
+nmap <Leader>S :set nospell<CR>
 
 "highlighted search settings
 "set F5 to enable highlighted search
-map <Leader>H :set hlsearch<CR>
+nmap <Leader>H :set hlsearch<CR>
 "set F6 to disable highlighted search
-map <Leader>h :set nohlsearch<CR>
+nmap <Leader>h :set nohlsearch<CR>
 
 " do not use whitespaces insted of tabs
-map <Leader>w :set noexpandtab<CR>
+nmap <Leader>w :set noexpandtab<CR>
 
 " use whitespace insted of tabs
-map <Leader>W :set expandtab<CR>
+nmap <Leader>W :set expandtab<CR>
 
 " toggle tagbar
 nmap <Leader>o :TagbarToggle<CR>
