@@ -122,8 +122,8 @@ setopt check_jobs
 # Aliases
 #=========================================================
 #-- ls --#
-alias ls='ls -G -F --color=auto'
-alias ll='ls -all --color=auto'
+alias ls='ls -G -F'
+alias ll='ls -all'
 
 #-- grep --#
 # colorize the output of the grep command
@@ -220,3 +220,4 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Use vim keybindings for shell
 bindkey -v
+
