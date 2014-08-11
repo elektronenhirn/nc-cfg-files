@@ -165,29 +165,37 @@ iab Apyheader
 " Refine leader 
 let mapleader = ","
 
+"**************************************** 
+" Normal-Mode Mappings
+"**************************************** 
 " Open .vimrc
 nnoremap <Leader>v :vsplit $MYVIMRC<CR> 
-
-" Nerd tree mappings
+" Toggle Nerd-Tree 
 nnoremap <Leader>n :NERDTree<CR>
-"Spell checking settings
-"set F2 to enable English spell checking (American English)
+"set spell checking language to american english
 nnoremap <Leader>e :set spell spelllang=en_us<CR>
-"set F3 to enable German spell checking 
+"set spell checking language to german 
 nnoremap <Leader>d :set spell spelllang=de_de<CR>
-"set F4 to toggle spell checking
+"toggle spell checking
 nnoremap <Leader>s :set spell!<CR>
 "toggle highlighted search 
 nnoremap <Leader>h :set hlsearch!<CR>
 " toggle use whitespaces insted of tabs
 nnoremap <Leader>w :set expandtab!<CR>
-" toggle tagbar
+" Toggle Tagbar
 nnoremap <Leader>o :TagbarToggle<CR>
+" Run Astyle on current file
+nnoremap <Leader>f :!astyle % <CR>
 
+" *********** HexEditor - Stuff ***********
+" Enable Hex-Editor-Mode
+nnoremap <Leader>X :%!xxd <CR>
+" Enable Hex-Editor-Mode
+nnoremap <Leader>x :%!xxd -r <CR>
+" toggle binary mode  (used to save files without newline)
+nnoremap <Leader>b set binary! <CR>
 
-"========================================================= 
-" Global (Gtags) integration 
-"========================================================= 
+" *********** Global (Gtags) integration ***********
 " go to the referenced point of <cword>
 nnoremap <Leader>r :Gtags -r <C-R>=expand("<cword>")<CR><CR>
 " locate symbol <cword> which are not defined in GTAGS 
@@ -201,15 +209,12 @@ nnoremap <Leader>i :GtagsCursor<CR>
 " create symbol file / should be called with pwd at project level
 nnoremap <Leader>c :!gtags  -w <CR>
 
-"========================================================= 
-" Astyle integration
-"========================================================= 
-nnoremap <Leader>f :!astyle % <CR>
+"**************************************** 
+" Visual-Mode Mappings
+"**************************************** 
+" Soround selected visual block with ""
+vnoremap <Leader>" ox<esc>i"<esc>pa"
 
-"========================================================= 
-" Other Shortcuts
-"========================================================= 
-" Enable Hex-Editor-Mode
-nnoremap <Leader>X :%!xxd <CR>
-" Enable Hex-Editor-Mode
-nnoremap <Leader>x :%!xxd -r <CR>
+
+
+
