@@ -2,7 +2,7 @@
 " .vimrc
 " Autor: Nicola Coretti
 " Contact: nico.coretti@googlemail.com
-" Version: 0.1
+" Version: 0.1.2
 "
 
 "========================================================= 
@@ -18,7 +18,7 @@ execute pathogen#infect()
 " Settings 
 "=========================================================
 " change color scheme
-"colors ir_black
+colorscheme  xoria256
 " set up omni-completion
 filetype plugin on
 set ofu=syntaxcomplete#Complete
