@@ -13,7 +13,6 @@ runtime bundle/pathogen/autoload/pathogen.vim
 " infect vim ;)
 execute pathogen#infect()
 
-
 "=========================================================
 " Settings 
 "=========================================================
@@ -67,6 +66,7 @@ set cursorline
 
 " show the active mode
  set showmode
+
 " disable case-sensitivity for searches
  set ignorecase
 
@@ -89,7 +89,6 @@ set wildmenu
 "=========================================================
 " Abbreviations
 "=========================================================
-
 " TODO marker
   iab Atd TODO:
 
@@ -118,7 +117,7 @@ set wildmenu
 "========================================================= 
 " Python Abbreviations
 "=========================================================
-iab Apymodule  
+iab Apyheader  
 \#!/usr/bin/python
 \<CR># -*- coding: utf-8 -*-
 \<CR>'''
@@ -132,8 +131,8 @@ iab Apymodule
 \<CR>    Decorators:           -
 \<CR>        
 \<CR>@author: Nicola Coretti
-\<CR>@contact: 
-\<CR>@version: 
+\<CR>@contact: nico.coretti@googlemail.com 
+\<CR>@version: <x.y.z>
 \<CR>'''
 \<CR>__all__ = []
 \<CR>
@@ -147,17 +146,10 @@ iab Apymodule
 \<CR># -- Module Decorators ---------------------------------------------------------
 \<CR># -- Module Exceptions --------------------------------------------------------
 
-iab Apyheader 
-\<CR>#!/usr/bin/python
-\<CR># -*- coding: utf-8 -*-
-\<CR>"""
-\<CR><module description>
-\<CR>
-\<CR>@author: Nicola Coretti
-\<CR>@contact: nico.coretti@googlemail.com
-\<CR>@version: <x.y.z> 
-\<CR>"""
-\<CR>__all__ = []
+"========================================================= 
+" C/C++ Abbreviations
+"=========================================================
+
 
 "=========================================================
 " Mappings
