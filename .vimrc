@@ -40,9 +40,6 @@ set autochdir
 " The error bell
  set noerrorbells
 
-" No tabs (use the appropriate number of spaces for a tab)
- set expandtab
-
 " Allow "hidden" buffers
  set hidden
 
@@ -81,7 +78,14 @@ set cursorline
 set tags=tags;/
 
 " smart ident safter linebreak
-"set smartindent
+set smartindent
+
+" more indention stuff
+set shiftwidth=4
+set softtabstop=4
+
+" No tabs (use the appropriate number of spaces for a tab)
+ set expandtab
 
 " activate backup
 set backup
@@ -152,25 +156,6 @@ iab Apyheader
 "========================================================= 
 " C/C++ Abbreviations
 "=========================================================
-iab ACppHeader
-\<CR>/**
-\<CR> * \file
-\<CR> * \author Nicola Coretti
-\<CR> * \contact nico.coretti@googlemail.com
-\<CR> * \version 0.0.1
-\<CR> *
-\<CR> * \copyright Copyright (c) 2014, Nicola Coretti. All rights reserved.
-\<CR> */
-
-iab ACppHeaderEsr
-\<CR>/**
-\<CR> * \file
-\<CR> * \author Nicola Coretti
-\<CR> * \contact nicola.coretti@partner.esrlabs.com
-\<CR> * \version 0.0.1
-\<CR> *
-\<CR> * \copyright Copyright (c) 2014, E.S.R.Labs GmbH. All rights reserved.
-\<CR> */
 
 "=========================================================
 " Mappings
