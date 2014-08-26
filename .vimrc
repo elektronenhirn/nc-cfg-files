@@ -152,7 +152,25 @@ iab Apyheader
 "========================================================= 
 " C/C++ Abbreviations
 "=========================================================
+iab ACppHeader
+\<CR>/**
+\<CR> * \file
+\<CR> * \author Nicola Coretti
+\<CR> * \contact nico.coretti@googlemail.com
+\<CR> * \version 0.0.1
+\<CR> *
+\<CR> * \copyright Copyright (c) 2014, Nicola Coretti. All rights reserved.
+\<CR> */
 
+iab ACppHeaderEsr
+\<CR>/**
+\<CR> * \file
+\<CR> * \author Nicola Coretti
+\<CR> * \contact nicola.coretti@partner.esrlabs.com
+\<CR> * \version 0.0.1
+\<CR> *
+\<CR> * \copyright Copyright (c) 2014, E.S.R.Labs GmbH. All rights reserved.
+\<CR> */
 
 "=========================================================
 " Mappings
