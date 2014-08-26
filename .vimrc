@@ -25,6 +25,9 @@ set ofu=syntaxcomplete#Complete
 " Activate syntax-highlighting
  syntax enable
 
+" Highlight while typing search pattern
+set incsearch
+
 " Highlighting search
  set hlsearch
 
@@ -177,7 +180,7 @@ nnoremap <Leader>w :set expandtab!<CR>
 " Toggle Tagbar
 nnoremap <Leader>o :TagbarToggle<CR>
 " Run Astyle on current file
-nnoremap <Leader>f :!astyle % <CR>
+nnoremap <Leader>F :!astyle % <CR>
 
 " *********** HexEditor - Stuff ***********
 " Enable Hex-Editor-Mode
@@ -207,6 +210,9 @@ nnoremap <Leader>c :!gtags  -w <CR>
 " Soround selected visual block with ""
 vnoremap <Leader>" ox<esc>i"<esc>pa"
 
-
-
+"**************************************** 
+" Insert-Mode Mappings
+"**************************************** 
+" leave insert mode with the shortcut jk
+inoremap jk <Esc>
 
