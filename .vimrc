@@ -56,7 +56,7 @@ set cursorline
  set showmode
 
 " customize the status line
- set statusline=Buffer[%n]\ File:%F%=ASCII-Value:hex(0x%02B),dez(%03b)\ Position:%l,%-4c\ --%P--
+ set statusline=Buffer[%n]\ File:%F%=ASCII-Value:hex(0x%02B),dez(%03b)\ Position:\ %l,%-4c\ --%P--
 
 " set the number of spaces a tab stop use
  set tabstop=4
