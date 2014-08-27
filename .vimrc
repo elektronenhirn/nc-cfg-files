@@ -25,6 +25,9 @@ set ofu=syntaxcomplete#Complete
 " Activate syntax-highlighting
  syntax enable
 
+" Highlight while typing search pattern
+set incsearch
+
 " Highlighting search
  set hlsearch
 
@@ -36,9 +39,6 @@ set autochdir
 
 " The error bell
  set noerrorbells
-
-" No tabs (use the appropriate number of spaces for a tab)
- set expandtab
 
 " Allow "hidden" buffers
  set hidden
@@ -78,7 +78,14 @@ set cursorline
 set tags=tags;/
 
 " smart ident safter linebreak
-"set smartindent
+set smartindent
+
+" more indention stuff
+set shiftwidth=4
+set softtabstop=4
+
+" No tabs (use the appropriate number of spaces for a tab)
+ set expandtab
 
 " activate backup
 set backup
@@ -150,7 +157,6 @@ iab Apyheader
 " C/C++ Abbreviations
 "=========================================================
 
-
 "=========================================================
 " Mappings
 "=========================================================
@@ -177,7 +183,7 @@ nnoremap <Leader>w :set expandtab!<CR>
 " Toggle Tagbar
 nnoremap <Leader>o :TagbarToggle<CR>
 " Run Astyle on current file
-nnoremap <Leader>f :!astyle % <CR>
+nnoremap <Leader>F :!astyle % <CR>
 
 " *********** HexEditor - Stuff ***********
 " Enable Hex-Editor-Mode
@@ -207,6 +213,9 @@ nnoremap <Leader>c :!gtags  -w <CR>
 " Soround selected visual block with ""
 vnoremap <Leader>" ox<esc>i"<esc>pa"
 
-
-
+"**************************************** 
+" Insert-Mode Mappings
+"**************************************** 
+" leave insert mode with the shortcut jk
+inoremap jk <Esc>
 
