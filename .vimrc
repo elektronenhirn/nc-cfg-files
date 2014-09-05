@@ -22,6 +22,9 @@ colorscheme  xoria256
 filetype plugin on
 set ofu=syntaxcomplete#Complete
 
+" Activate command line completion
+set wildmenu 
+
 " Activate syntax-highlighting
  syntax enable
 
