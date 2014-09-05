@@ -16,3 +16,6 @@
 [submodule ".vim/bundle/vim-lldb"]
 	path = .vim/bundle/vim-lldb
 	url = https://github.com/gilligan/vim-lldb.git
+[submodule ".vim/bundle/vimwiki"]
+	path = .vim/bundle/vimwiki
+	url = git://github.com/vim-scripts/vimwiki.git
