@@ -6,8 +6,7 @@
 "
 
 "========================================================= 
-" Plugins
-"========================================================= 
+" Plugins "========================================================= 
 runtime plugin/gtags.vim
 runtime bundle/pathogen/autoload/pathogen.vim
 " infect vim ;)
@@ -209,6 +208,9 @@ nnoremap <Leader>f :Gtags <C-R>=expand("<cfile>")<CR><CR>
 nnoremap <Leader>i :GtagsCursor<CR>
 " create symbol file / should be called with pwd at project level
 nnoremap <Leader>c :!gtags  -w <CR>
+
+" Open up CtrlP plugin (FuzzyFile Search)
+nnoremap <Leader>p :CtrlP <CR>
 
 "**************************************** 
 " Visual-Mode Mappings
