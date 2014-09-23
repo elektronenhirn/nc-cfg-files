@@ -209,8 +209,10 @@ nnoremap <Leader>i :GtagsCursor<CR>
 " create symbol file / should be called with pwd at project level
 nnoremap <Leader>c :!gtags  -w <CR>
 
-" Open up CtrlP plugin (FuzzyFile Search)
+" Open up CtrlP plugin (FuzzyFile Search Dirs)
 nnoremap <Leader>p :CtrlP <CR>
+" Open up CtrlP plguin (FuzziFile Search in Buffers)
+nnoremap <Leader>P :CtrlPBuffer <CR>
 
 "**************************************** 
 " Visual-Mode Mappings
